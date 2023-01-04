@@ -1,10 +1,10 @@
 import vue from "@vitejs/plugin-vue";
 import vueJsx from "@vitejs/plugin-vue-jsx";
-import { resolve } from "node:path";
 import { fileURLToPath, URL } from "node:url";
 import { presetAttributify, presetIcons, presetUno } from "unocss";
 import unocss from "unocss/vite";
 import AutoImport from "unplugin-auto-import/vite";
+import Components from 'unplugin-vue-components/vite';
 import { ConfigEnv, defineConfig, UserConfigExport } from "vite";
 import { viteMockServe } from "vite-plugin-mock";
 
@@ -39,6 +39,7 @@ export default ({ command }: ConfigEnv): UserConfigExport => {
         imports: ["vue"],
         dts: "src/auto-import.d.ts",
       }),
+      Components({}),
       viteMockServe({
         mockPath: "mock", // 设置模拟.ts 文件的存储文件夹
         localEnabled: command === "serve", // 设置是否启用本地 xxx.ts 文件，不要在生产环境中打开它.设置为 false 将禁用 mock 功能

@@ -8,6 +8,7 @@
   - alias
   - proxy
   - unplugin-auto-import (https://github.com/antfu/unplugin-auto-import)
+  - unplugin-vue-components (https://github.com/antfu/unplugin-vue-components)
   - plugin-vue-jsx (https://github.com/vitejs/vite/tree/main/packages/plugin-vue-jsx)
   - vite-plugin-mock (https://github.com/vbenjs/vite-plugin-mock)
 - unocss (https://uno.antfu.me,https://github.com/unocss/unocss)
