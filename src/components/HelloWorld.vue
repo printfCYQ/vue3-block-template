@@ -1,5 +1,7 @@
 <script setup lang="ts">
 defineProps<{ msg: string }>()
+
+const fontSize = ref('30px')
 </script>
 
 <template>
@@ -10,5 +12,6 @@ $color :red;
 
 h1 {
   color: $color;
+  font-size: v-bind(fontSize);
 }
 </style>
